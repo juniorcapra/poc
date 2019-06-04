@@ -20,12 +20,12 @@ public class Order {
     public Date orderDate;
 
     @Column("purchaser")
-    public int purchaser;
+    public Integer purchaser;
 
     @Column("quantity")
-    public int quantity;
+    public Integer quantity;
 
     @Column("product_id")
-    public int productId;
+    public Integer productId;
 
 }
