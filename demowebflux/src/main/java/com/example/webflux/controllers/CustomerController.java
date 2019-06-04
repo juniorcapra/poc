@@ -23,11 +23,9 @@ public class CustomerController {
         return customerRepository.findAll();
     }
 
-
     @PostMapping(path = "/new")
     public Mono<Customer> save(@RequestBody Customer customer) {
         return customerRepository.save(customer);
     }
-
 
 }
