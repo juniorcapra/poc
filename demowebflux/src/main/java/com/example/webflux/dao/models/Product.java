@@ -6,18 +6,18 @@ import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Data
-@Table("inventory.customers")
-public class Customer {
+@Table("inventory.products")
+public class Product {
     @Id
     public Integer id;
 
-    @Column("first_name")
-    public String firstName;
+    @Column("name")
+    public String name;
 
-    @Column("last_name")
-    public String lastName;
+    @Column("description")
+    public String description;
 
-    @Column("email")
-    public String email;
+    @Column("weight")
+    public Float weight;
 
 }

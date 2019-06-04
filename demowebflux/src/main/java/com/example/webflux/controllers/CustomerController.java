@@ -2,8 +2,6 @@ package com.example.webflux.controllers;
 
 import com.example.webflux.dao.models.Customer;
 import com.example.webflux.dao.repositories.CustomerRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
