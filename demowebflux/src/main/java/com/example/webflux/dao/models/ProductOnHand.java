@@ -6,7 +6,7 @@ import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Data
-@Table("inventory.products_on_hand")
+@Table("products_on_hand")
 public class ProductOnHand {
     @Id
     @Column("product_id")

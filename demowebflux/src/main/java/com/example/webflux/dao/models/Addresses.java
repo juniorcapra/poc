@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 
-@Table("inventory.addresses")
+@Table("addresses")
 @Data
 public class Addresses {
 

@@ -9,7 +9,7 @@ import org.springframework.data.relational.core.mapping.Table;
 import java.util.Date;
 
 @Data
-@Table("inventory.orders")
+@Table("orders")
 public class Order {
     @Id
     @Column("order_number")
