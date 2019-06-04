@@ -8,8 +8,8 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.Date;
 
-@Table("inventory.orders")
 @Data
+@Table("inventory.orders")
 public class Order {
     @Id
     @Column("order_number")
