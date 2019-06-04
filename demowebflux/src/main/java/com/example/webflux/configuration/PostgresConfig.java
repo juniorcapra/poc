@@ -19,6 +19,7 @@ public class PostgresConfig extends AbstractR2dbcConfiguration {
                         .host("db-postgres.cqhdonyuoa1o.us-east-2.rds.amazonaws.com")
                         .port(5432)
                         .database("inventory")
+                        .schema("inventory")
                         .username("postgres")
                         .password("omsdafiti")
                         .build()
