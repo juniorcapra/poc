@@ -8,7 +8,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Data
 @Table("addresses")
 public class Address {
-
     @Id
     public Integer id;
 
