@@ -8,6 +8,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Data
 @Table("products_on_hand")
 public class ProductOnHand {
+
     @Id
     @Column("product_id")
     public Integer productId;

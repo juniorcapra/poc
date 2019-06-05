@@ -11,6 +11,7 @@ import java.util.Date;
 @Data
 @Table("orders")
 public class Order {
+
     @Id
     @Column("order_number")
     public Integer orderNumber;
