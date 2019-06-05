@@ -1,6 +1,6 @@
 package com.example.webflux.dao.models;
 
-public enum AddressesType {
+public enum AddressType {
 
  SHIPPING("Shipping"),
  BILLING("Billing"),
@@ -9,7 +9,7 @@ public enum AddressesType {
 
  private String descricao;
 
- private AddressesType(String descricao) {
+ private AddressType(String descricao) {
 
   this.descricao = descricao;
 
