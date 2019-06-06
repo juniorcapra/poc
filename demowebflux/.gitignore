@@ -83,3 +83,4 @@ local.properties
 # Compile/build stuff
 target/
 *.class
+*.iml
