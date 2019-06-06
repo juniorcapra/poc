@@ -17,9 +17,7 @@ public class OrderController {
     }
 
     @GetMapping(path = "/all")
-    public Flux<Order> findaAll() {
-        return orderRepository.findAll();
-    }
+    public Flux<Order> findaAll() { return orderRepository.findAll(); }
 
     @PostMapping(path = "/new")
     public Mono<Order> save(@RequestBody Order order) {
