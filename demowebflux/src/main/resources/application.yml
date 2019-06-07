@@ -4,3 +4,11 @@ logging:
     org.springframework: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %-40logger{36} - %msg%n"
+
+postgres:
+  host: ${POSTGRES_HOST:localhost}
+  port: ${POSTGRES_PORT:5432}
+  database: ${POSTGRES_DB:oms-consumer-api}
+  schema: ${POSTGRES_SCHEMA:public}
+  username: ${POSTGRES_USER:docker}
+  password: ${POSTGRES_PASSWORD:docker}
