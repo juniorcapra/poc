@@ -11,4 +11,7 @@ public interface CustomerRepository extends ReactiveCrudRepository<Customer, Int
 
     @Query("select * from inventory.customers")
     Flux<Customer> findCustomers();
+
+    @Query("select * from inventory.customers where first_name like 'J%'")
+    Flux<Customer> findCustomersStartWithJ();
 }
