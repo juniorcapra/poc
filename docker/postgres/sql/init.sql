@@ -13,7 +13,7 @@ CREATE TABLE addresses (
  city varchar(255) NOT NULL,
  state varchar(255) NOT NULL,
  zip varchar(255) NOT NULL,
- type address_type NOT NULL
+ type varchar(255) NOT NULL
  );
 
 CREATE TABLE products (
