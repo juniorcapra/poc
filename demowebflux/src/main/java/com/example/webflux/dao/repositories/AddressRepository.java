@@ -9,6 +9,6 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface AddressRepository extends ReactiveCrudRepository<Address,Integer> {
     
-    @Query("select * from inventory.addresses")
+    @Query("select * from addresses")
     Flux<Address> findAddresses();
 }

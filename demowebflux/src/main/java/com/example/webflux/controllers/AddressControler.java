@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(path = "/inventory.address")
+@RequestMapping(path = "/address")
 public class AddressControler {
 
     private AddressRepository addressRepository;

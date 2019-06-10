@@ -8,7 +8,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(path = "/inventory.customer")
+@RequestMapping(path = "/customer")
 public class CustomerController {
 
     private CustomerRepository customerRepository;

@@ -9,9 +9,9 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface CustomerRepository extends ReactiveCrudRepository<Customer, Integer> {
 
-    @Query("select * from inventory.customers")
+    @Query("select * from customers")
     Flux<Customer> findCustomers();
 
-    @Query("select * from inventory.customers where first_name like 'J%'")
+    @Query("select * from customers where first_name like 'J%'")
     Flux<Customer> findCustomersStartWithJ();
 }
