@@ -5,23 +5,43 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.List;
-
 @Data
-@Table("customers")
-public class Customer {
+public class AddressCustomer {
 
 
-    @Id
-    private Integer id;
 
-    @Column("first_name")
+// ADDRESS
+
+    public Integer idAddress;
+
+
+    public Integer customerId;
+
+
+    public String street;
+
+
+    public String city;
+
+
+    public String state;
+
+
+    public String zip;
+
+
+    public String type;
+
+
+
+
+    //  CUSTOMERS
+
     private String firstName;
 
-    @Column("last_name")
+
     private String lastName;
 
-    @Column("email")
-    private String email;
 
+    private String email;
 }
