@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping(path = "/address")
 public class AddressControler {
@@ -21,7 +23,7 @@ public class AddressControler {
     }
 
     @GetMapping(path = "/all")
-    public Flux<Address> findaAll() {
+    public Flux<Map<String, Object>> findaAll() {
         return addressCustomerRepository.buscarAdd();
     }
 

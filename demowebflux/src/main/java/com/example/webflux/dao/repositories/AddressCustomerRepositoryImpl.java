@@ -1,13 +1,12 @@
 package com.example.webflux.dao.repositories;
 
 
-import com.example.webflux.dao.models.Address;
-import com.example.webflux.dao.models.Customer;
 import io.r2dbc.spi.ConnectionFactory;
 import org.springframework.data.r2dbc.core.DatabaseClient;
-import org.springframework.data.r2dbc.repository.query.Query;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
+
+import java.util.Map;
 
 @Repository
 public class AddressCustomerRepositoryImpl {
@@ -26,16 +25,14 @@ public class AddressCustomerRepositoryImpl {
 
 
 
- public Flux<Address> buscarAdd(){
-     return databaseClient.execute().sql("select * from addresses addr\n" +
-             "join customers cst \n" +
-             "on cst.id = addr.customer_id").as(Address.class).fetch().all();
+ public Flux<Map<String, Object>> buscarAdd(){
+     return databaseClient.execute()
+             .sql("select * from addresses addr\n" +
+                     "join customers cst \n" +
+                     "on cst.id = addr.customer_id")
+             .fetch()
+             .all();
 
-
-//     Flux<Map<String, Object>> rows = databaseClient.execute()
-//             .sql("SELECT id, name, manual FROM legoset")
-//             .fetch()
-//             .all();
  }
 
 }
