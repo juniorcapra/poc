@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(path = "/inventory.productOnHand")
+@RequestMapping(path = "/productOnHand")
 public class ProductOnHandController {
 
     private ProductOnHandRepository productOnHandRepository;
