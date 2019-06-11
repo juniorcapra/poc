@@ -16,8 +16,6 @@ public class AddressCustomerRepositoryImpl {
     DatabaseClient databaseClient;
 
     public AddressCustomerRepositoryImpl(ConnectionFactory connectionFactory) {
-
-
         this.connectionFactory = connectionFactory;
         this.databaseClient = DatabaseClient.create(connectionFactory);
 

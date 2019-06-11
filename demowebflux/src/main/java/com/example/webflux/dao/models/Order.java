@@ -29,4 +29,7 @@ public class Order {
     @Column("product_id")
     public Integer productId;
 
+
+
+
 }

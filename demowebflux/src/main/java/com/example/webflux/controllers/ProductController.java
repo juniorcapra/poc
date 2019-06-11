@@ -1,6 +1,7 @@
 package com.example.webflux.controllers;
 
 import com.example.webflux.dao.models.Product;
+import com.example.webflux.dao.models.ProductDTO;
 import com.example.webflux.dao.repositories.ProductRepository;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -22,8 +23,8 @@ public class ProductController {
     }
 
     @PostMapping(path = "/new")
-    public Mono<Product> save(@RequestBody Product product) {
-        return productRepository.save(product);
+    public Mono<Product> save(@RequestBody ProductDTO productDto) {
+         return productRepository.save(productDto.transformaParaObjeto());
     }
 
 }

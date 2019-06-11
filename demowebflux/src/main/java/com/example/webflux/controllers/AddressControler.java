@@ -1,9 +1,11 @@
 package com.example.webflux.controllers;
 
 import com.example.webflux.dao.models.Address;
+import com.example.webflux.dao.models.AddressDTO;
 import com.example.webflux.dao.repositories.AddressCustomerRepositoryImpl;
 import com.example.webflux.dao.repositories.AddressRepository;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -28,8 +30,9 @@ public class AddressControler {
     }
 
     @PostMapping(path = "/new")
-    public Mono<Address> save(@RequestBody Address address) {
-        return addressRepository.save(address);
+    public Mono<Address> save(@RequestBody AddressDTO addressDto) {
+
+        return addressRepository.save(addressDto.transformaParaObjeto());
     }
 
 }

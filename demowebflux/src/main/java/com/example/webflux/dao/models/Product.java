@@ -21,4 +21,9 @@ public class Product {
     @Column("weight")
     public Float weight;
 
+    public Product(String name, String description, Float weight) {
+        this.name = name;
+        this.description = description;
+        this.weight = weight;
+    }
 }

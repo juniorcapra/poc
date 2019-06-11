@@ -30,4 +30,12 @@ public class Address {
     @Column("type")
     public String type;
 
+    public Address(Integer customerId, String street, String city, String state, String zip, String type) {
+        this.customerId = customerId;
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.type = type;
+    }
 }
