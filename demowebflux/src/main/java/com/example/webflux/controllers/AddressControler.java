@@ -5,7 +5,6 @@ import com.example.webflux.dao.models.AddressDTO;
 import com.example.webflux.dao.repositories.AddressCustomerRepositoryImpl;
 import com.example.webflux.dao.repositories.AddressRepository;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
