@@ -5,12 +5,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.List;
-
 @Data
 @Table("customers")
 public class Customer {
-
 
     @Id
     private Integer id;
@@ -24,9 +21,4 @@ public class Customer {
     @Column("email")
     private String email;
 
-    public Customer(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
 }

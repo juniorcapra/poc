@@ -1,6 +1,6 @@
 logging:
   level:
-    root: WARN
+    root: INFO
     org.springframework: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %-40logger{36} - %msg%n"

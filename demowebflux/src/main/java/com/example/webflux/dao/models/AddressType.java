@@ -8,9 +8,7 @@ public enum AddressType {
     private String descricao;
 
     private AddressType(String descricao) {
-
         this.descricao = descricao;
-
     }
 
 }
