@@ -10,7 +10,11 @@ import java.util.Map;
 @Repository
 public class AddressCustomerRepositoryImpl {
 
+    public AddressCustomerRepositoryImpl() {
+    }
+
     ConnectionFactory connectionFactory;
+
     DatabaseClient databaseClient;
 
     public AddressCustomerRepositoryImpl(ConnectionFactory connectionFactory) {

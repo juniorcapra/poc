@@ -12,6 +12,9 @@ import reactor.core.publisher.Mono;
 @RequestMapping(path = "/productOnHand")
 public class ProductOnHandController {
 
+    public ProductOnHandController() {
+    }
+
     private ProductOnHandRepository productOnHandRepository;
 
     public ProductOnHandController(ProductOnHandRepository productOnHandRepository) {

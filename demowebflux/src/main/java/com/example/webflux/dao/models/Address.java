@@ -1,5 +1,6 @@
 package com.example.webflux.dao.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
@@ -12,6 +13,7 @@ public class Address {
     @Id
     public Integer id;
 
+    @JsonProperty("customer_id")
     @Column("customer_id")
     public Integer customerId;
 

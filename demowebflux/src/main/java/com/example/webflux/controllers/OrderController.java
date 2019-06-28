@@ -12,6 +12,9 @@ import reactor.core.publisher.Mono;
 @RequestMapping(path = "/order")
 public class OrderController {
 
+    public OrderController() {
+    }
+
     private OrderRepository orderRepository;
 
     public OrderController(OrderRepository orderRepository) {

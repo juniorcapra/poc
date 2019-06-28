@@ -2,7 +2,7 @@ package com.example.webflux.controllers;
 
 import com.example.webflux.dao.models.Address;
 import com.example.webflux.dao.repositories.AddressCustomerRepositoryImpl;
-import com.example.webflux.dao.repositories.AddressRepository;
+import com.example.webflux.dao.services.AddressServiceImpl;
 import lombok.extern.java.Log;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -15,18 +15,20 @@ import java.util.Map;
 @RequestMapping(path = "/address")
 public class AddressControler {
 
-    private AddressRepository addressRepository;
+    private AddressServiceImpl addressService;
+
+
     private AddressCustomerRepositoryImpl addressCustomerRepository;
 
-    public AddressControler(AddressRepository addressRepository, AddressCustomerRepositoryImpl addressCustomerRepository) {
-        this.addressRepository = addressRepository;
+    public AddressControler(AddressServiceImpl addressService, AddressCustomerRepositoryImpl addressCustomerRepository) {
+        this.addressService = addressService;
         this.addressCustomerRepository = addressCustomerRepository;
     }
 
     @GetMapping(path = "/all")
     public Flux<Address> findaAll() {
         log.info("=> Listing all Addresses ...");
-        return addressRepository.findAll();
+        return addressService.buscarTodos();
     }
 
     @GetMapping(path = "/findWithJoin")
@@ -35,16 +37,11 @@ public class AddressControler {
         return addressCustomerRepository.findWithJoin();
     }
 
-    @GetMapping(path = "/firstAddress")
-    public Mono<Address> findFirstAddress() {
-        log.info("=> Listing Address where ID equal 1 ...");
-        return addressRepository.findFirstAddress();
-    }
 
     @PostMapping(path = "/new")
     public Mono<Address> save(@RequestBody Address address) {
         log.info("=> Saving Address: " + address.toString());
-        return addressRepository.save(address);
+        return addressService.salvar(address);
     }
 
 }

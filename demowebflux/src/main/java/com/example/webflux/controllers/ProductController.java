@@ -12,6 +12,9 @@ import reactor.core.publisher.Mono;
 @RequestMapping(path = "/product")
 public class ProductController {
 
+    public ProductController() {
+    }
+
     private ProductRepository productRepository;
 
     public ProductController(ProductRepository productRepository) {
